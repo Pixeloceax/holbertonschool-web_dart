@@ -9,9 +9,18 @@ String longestPalindrome(String s) {
       }
     }
   }
-  return longestPalindrome;
+  if (longestPalindrome.isEmpty) {
+    return 'none';
+  } else {
+    return longestPalindrome;
+  }
 }
 
-bool isPalindrome(String word) {
-  return word == word.split('').reversed.join('');
+bool isPalindrome(String s) {
+  var reversed = s.split('').reversed.join('');
+  if (s == reversed && s.length >= 3) {
+    return true;
+  } else {
+    return false;
+  }
 }
