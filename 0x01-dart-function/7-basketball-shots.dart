@@ -11,5 +11,11 @@ int whoWins(Map<String, int> teamA, Map<String, int> teamB) {
   var teamAScore = teamA.values.reduce((a, b) => a + b);
   var teamBScore = teamB.values.reduce((a, b) => a + b);
 
-  return teamAScore.compareTo(teamBScore);
+  if (teamAScore > teamBScore) {
+    return 1;
+  } else if (teamAScore < teamBScore) {
+    return 2;
+  } else {
+    return 0;
+  }
 }
