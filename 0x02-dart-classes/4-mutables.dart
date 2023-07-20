@@ -3,6 +3,14 @@ class Password {
 
   Password({required String password}) : _password = password;
 
+  set password(String password) {
+    _password = password;
+  }
+
+  String get password {
+    return _password;
+  }
+
   bool isValid() {
     if (_password.length < 8) return false;
     if (!_password.contains(RegExp(r'[A-Z]'))) return false;
